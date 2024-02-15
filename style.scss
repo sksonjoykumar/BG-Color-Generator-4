@@ -1,0 +1,107 @@
+@import "./another_style/index";
+
+// style main-container
+.main-container {
+  //   background-color: aquamarine;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .heading {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-shadow: 2px 2px 2px tomato;
+  }
+  .input-container {
+    input {
+      padding: 10px 0;
+      border: 2px solid tomato;
+      background-color: #ffffff;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    .copyBtn {
+      margin-left: 6px;
+      padding: 10px 15px;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+      background-color: tomato;
+      color: #ffffff;
+      font-size: 20px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      cursor: pointer;
+      transition: all 0.4s;
+    }
+    .copyBtn:hover {
+      background-color: #ffffff;
+      color: tomato;
+    }
+  }
+  .chnageBtn {
+    margin-top: 20px;
+    padding: 15px 103px;
+    background-color: tomato;
+    color: #ffffff;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .chnageBtn:hover {
+    background-color: #ffffff;
+    color: tomato;
+  }
+}
+
+.toastMsg {
+  z-index: 999;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: #5cb85c;
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+// CSS Animation style
+.toast-message-slide-in {
+  animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+  animation: toast-animation-out 0.5s ease-in;
+}
+// Create css keyframes
+@keyframes toast-animation-in {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-animation-out {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
